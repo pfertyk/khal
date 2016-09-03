@@ -297,6 +297,7 @@ def construct_event(dtime_list, locale,
     see tests for examples
 
     """
+    print('No hello for you!')
     # TODO remove if this survives for some time in the wild without getting any reports
     first_type = type(dtime_list[0])
     try:
