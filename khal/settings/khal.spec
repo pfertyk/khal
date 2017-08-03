@@ -175,6 +175,8 @@ quit = force_list(default=list('q', 'Q'))
 # new event). If this is not set, such operations require an explicit value.
 default_calendar = string(default=None)
 
+new_event_title = string(default='new event')
+
 # By default, khal displays only dates with events in `list` or `calendar`
 # view.  Setting this to *True* will show all days, even when there is no event
 # scheduled on that day.

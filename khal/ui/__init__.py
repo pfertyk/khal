@@ -873,13 +873,15 @@ class EventColumn(urwid.WidgetWrap):
             start = dt.datetime.combine(date, dt.time(dt.datetime.now().hour))
             end = start + dt.timedelta(minutes=60)
             event = utils.new_event(
-                dtstart=start, dtend=end, summary="new event",
+                dtstart=start, dtend=end,
+                summary=self._conf['default']['new_event_title'],
                 timezone=self._conf['locale']['default_timezone'],
                 locale=self._conf['locale'],
             )
         else:
             event = utils.new_event(
-                dtstart=date, dtend=end + dt.timedelta(days=1), summary="new event",
+                dtstart=date, dtend=end + dt.timedelta(days=1),
+                summary=self._conf['default']['new_event_title'],
                 allday=True, locale=self._conf['locale'],
             )
         event = self.pane.collection.new_event(
